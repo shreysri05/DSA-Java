@@ -11,10 +11,11 @@ class Solution {
                 
             }
         
-        } for(i=0;i<arr.length;i++){
-            if(arr[i]!=i+1)ans.add(arr[i]);
+        } for(i=arr.length-1;i>=0;i--){
+            if(arr[i]!=i+1)
+            {if(!ans.contains(arr[i]))ans.add(arr[i]);}
         }
-          Collections.sort(ans);
+          
         return ans;
     }
 }
